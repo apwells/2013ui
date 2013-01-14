@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rss version="0.91">
+<sms><number>4431111241</number><message>TEXT RECEIVED</message><time>12:30</time></sms>
+<sms><number>4422222221</number><message>TEXT RECEIVED 2</message><time>22:22</time></sms>
+</rss>

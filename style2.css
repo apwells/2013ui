@@ -1,0 +1,65 @@
+
+#wrapper {
+width: 1000px;
+margin: auto;
+}
+
+#leftpanel {
+float:left;
+height:500px;
+width: 250px;
+border-style:solid;
+border-width:medium;
+padding-right:15px;
+padding-left:15px;
+}
+
+#middlepanel {
+float:left;
+height:500px;
+margin-left: 20px;
+width: 250px;
+border-style:solid;
+border-width:medium;
+padding-right:15px;
+padding-left:15px;
+}
+
+#rightpanel {
+float:left;
+margin-left: 20px;
+height:500px;
+width: 250px;
+border-style:solid;
+border-width:medium;
+overflow:scroll;
+padding-right:15px;
+padding-left:15px;
+}
+
+#bottompanel {
+float:left;
+margin-top: 10px;
+height:200px;
+width: 862px;
+border-style:solid;
+border-width:medium;
+padding-right:15px;
+padding-left:15px;
+}
+
+#GPSbutton {
+  color: #900;
+  font-weight: bold;
+
+}
+
+.textmessage p {
+max-height :50px;
+overflow : hidden;
+text-overflow: ellipsis;
+}
+
+.clear {
+clear:both;
+}

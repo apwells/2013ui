@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Networked Vehicles v0.1</title>
+<script src="jquery.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="style.css" />
+
+</head>
+
+<body>
+<div id="wrapper">
+
+<div id="leftpanel" class = "panel">
+	<form name="sms" action="sendsms.php" method="post">
+		Phone Number : <input type="tel" pattern="[0-9]{10}" id="phonenumber" value="+44">
+		<textarea type="text" name="message" id = "msg"> </textarea>
+		<input type="submit" value="Send SMS" id="sendsms">
+	</form>
+	
+	<form name="website" action="getwebsite.php" method="get">
+		Website : <input type="url" name="websiteurl" value="http://" id="webinput">
+		<input type="submit" value="Go To URL" id="urlbutton">
+	</form>
+	
+</div>
+<div id="middlepanel" class = "panel">
+	<form name="gps" action="gps.php" method="get">
+		<a href="#" class="mybutton">GPS</a>
+	</form>
+	
+	<form name="camera" action="editFile.php" method="get">
+		<a href="#" class="mybutton">Camera</a>
+	</form>
+	
+	<form name="contacts" action="contacts.php" method="get">
+		<a href="#" class="mybutton">View/Edit Contacts</a>
+	</form>
+</div>
+<div id="rightpanel" class = "panel">
+	<div class="textmessage">
+		<h3>From 043499922</h3>
+		<h4>Received at : 12:04</h4>
+		<p>I am the contents of a text message. Style me, be quick, hurry up,etcsdaadsajsadhgsdahkhksdakhjsdajkhjhkdsjkhsadjhkjkhasdsdajkhdsajadsjhjkadsjkhadsjdasjkhdsahjkasdhjkdashjksadhkadshkdaskhjsadhjksadhjkadshjkadskhjdashjkdashjkadshjkadshjkadskjhadskjhadshjkadsjhkadskhjads</p>
+	</div>
+	<div class="textmessage">
+		<h3>From 043499922</h3>
+		<h4>Received at : 12:04</h4>
+		<p>I am the contents of a text message. Style me</p>
+	</div>
+	<div class="textmessage">
+		<h3>From 043499922</h3>
+		<h4>Received at : 12:04</h4>
+		<p>I am the contents of a text message. Style me</p>
+	</div>
+	<div class="textmessage">
+		<h3>From 043499922</h3>
+		<h4>Received at : 12:04</h4>
+		<p>I am the contents of a text message. Style me</p>
+	</div>
+	<div class="textmessage">
+		<h3>From 043499922</h3>
+		<h4>Received at : 12:04</h4>
+		<p>I am the contents of a text message. Style me</p>
+	</div>
+	<div class="textmessage">
+		<h3>From 043499922</h3>
+		<h4>Received at : 12:04</h4>
+		<p>I am the contents of a text message. Style me</p>
+	</div>
+</div>
+
+<div class = "clear">
+</div>
+
+<div id="bottompanel" class = "panel">
+	<p>Error message code 2223: "Contact not found" etc.etc.</p>
+</div>
+</div>
+</body>
+</html>
