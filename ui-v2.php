@@ -3,49 +3,96 @@
 <head>
 <title>Networked Vehicles v0.1</title>
 <script src="jquery.js" type="text/javascript"></script>
-<link rel="stylesheet" type="text/css" href="style2.css" />
+<link rel="stylesheet" type="text/css" href="style.css" />
 
 </head>
 
 <body>
 <div id="wrapper">
-	<div id="leftpanel" class="panel">
+	<div id="leftpanel" class="panel toppanel">
+		<h3>Send SMS</h3>
 		<form name="sms" action="editfile.php" method="post">
-			Phone Number : <input type="tel" name="number">
-			<input type="text" name="message">
+			Phone Number : <input type="tel" pattern="[0-9]{10}" class="textfield" name="number">
+			<textarea type="text" name="message" id ="msg"></textarea>
 			<input type="submit" value="Submit">
 		</form>
-		
+		<h3>HTTP request</h3>
 		<form name="website" action="getwebsite.php" method="get">
-			Website : <input type="url" name="websiteurl">
+			Website : <input type="url" class="textfield" name="websiteurl">
 			<input type="submit" value="Submit">
 		</form>
 		
 	</div>
-	<div id="middlepanel">
-		<form name="gps" action="editfile.php?sensor=gps&activate=on" method="get">
-			<input type="submit" value="GPS">
-		</form>
-		
-		<a href="editfile.php?sensor=gps&activate=on">GPS ON</a>
-		
-		<form name="camera" action="editFile.php" method="get">
-			<input type="submit" value="Camera">
-		</form>
-		
-		<a href="editfile.php?sensor=camera&activate=on">CAMERA ON</a>
-		
-		<form name="contacts" action="contacts.php" method="get">
-			<input type="submit" value="View/Edit Contacts">
-		</form>
+	<div id="middlepanel" class="panel toppanel">
+		<a href="#" trackgps="yes" id="gpsbtn" class="mybutton">GPS on</a>
+		<a href="#" trackcamera="yes" id="camerabtn" class="mybutton">Camera on</a>
+		<a href="#" trackcontacts="yes" class="mybutton">Contacts</a>
+		<a href="#" tracksms="yes" class="mybutton">SMS</a>
 	</div>
-	<div id="rightpanel">
+	<div id="rightpanel" class="panel toppanel">
 		<?php include('loadsms.php');?>
 	</div>
 	<div class="clear"></div>
-	<div id="bottompanel">
-		<p>Error message code 2223: "Contact not found" etc.etc.</p>
+	<div id="bottompanel" class="panel">
+		<p>System running...</p>
 	</div>
+<div id="microsoft"><img src="poweredby.png" alt="microsoft" /></div>
 </div>
+
+
 </body>
 </html>
+
+<script>
+
+var gps = 0;
+var camera = 0;
+
+$("a[trackgps='yes']").click(function(e){
+  // alert('button clicked');
+  if (gps == 0) {
+  	$("#bottompanel").load("editfile.php?sensor=gps&activate=on");
+  	$("#gpsbtn").html("GPS off");
+  	gps = 1;
+  } else {
+  	$("#bottompanel").load("editfile.php?sensor=gps&activate=off");
+  	$("#gpsbtn").html("GPS on");
+  	gps = 0;
+  }
+  
+});
+  
+$("a[trackcamera='yes']").click(function(e){
+  // alert('button clicked');
+  if (camera == 0) {
+  	$("#bottompanel").load("editfile.php?sensor=camera&activate=on");
+  	$("#camerabtn").html("Camera off");
+  	camera = 1;
+  } else {
+  	$("#bottompanel").load("editfile.php?sensor=camera&activate=off");
+  	$("#camerabtn").html("Camera on");
+  	camera = 0;
+  }
+  
+});
+
+$("a[trackcontacts='yes']").click(function(e){
+	$("#rightpanel").html('<iframe src="contacts.php" seamless width="100%" height="100%"></iframe>');
+});
+
+$("a[tracksms='yes']").click(function(e){
+	$("#rightpanel").load("loadsms.php");
+});
+
+// Change vertical alignment...
+
+window.onload = checkAvailableHeight;
+
+window.onresize = checkAvailableHeight;
+
+function checkAvailableHeight(){
+    var yourDiv = document.getElementById("wrapper");
+    yourDiv.style.marginTop = (($(window).height() - 570) / 2) + "px";
+}
+
+</script>

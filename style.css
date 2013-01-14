@@ -2,29 +2,34 @@
 width: 898px;
 margin: auto;
 height:570px;
+padding-top: 20px;
 }
 
 body{
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.65)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
-background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); 
-font-family : arial;
+background: #3d3d3d;
+font-family : 'Lucida Grande', Arial, sans-serif;
 }
 
-#leftpanel {
-float:left;
-height:350px;
-width: 250px;
-border-style:solid;
-border-width:medium;
-border-color:gray;
-padding-right:15px;
-padding-left:15px;
-background-color:#cdc9c9;
-font-weight:bold;
+p, h1, h2, h3, h4{
+margin: 0;
+}
+
+h3 {
+color: #416470;
+margin-bottom: 5px;
+}
+
+p {
+color: #323232;
+font-weight: lighter;
+font-size: 12px;
+}
+
+h4 {
+font-family: 'Courier', Arial;
+text-autospace: 5px;
+font-size: 12px;
+font-weight: lighter;
 }
 
 #phonenumber{
@@ -34,8 +39,8 @@ width : 110px;
 
 #msg{
 margin-top :10px;
-height :200px;
-width:240px;
+height:100px;
+width:100%;
 }
 
 #sendsms{
@@ -52,31 +57,23 @@ margin-top:5px;
 margin-left:80px;
 }
 
+#leftpanel {
+float:left;
+height:350px;
+}
+
 #middlepanel {
 float:left;
 height:350px;
 margin-left: 20px;
-width: 250px;
-border-style:solid;
-border-width:medium;
-border-color:gray;
-padding-right:15px;
-padding-left:15px;
-background-color:#cdc9c9;
+padding-top: 30px;
+text-align: center;
 }
 
 #rightpanel {
 float:left;
 margin-left: 20px;
 height:350px;
-width: 250px;
-border-style:solid;
-border-width:medium;
-border-color:gray;
-overflow:scroll;
-padding-right:15px;
-padding-left:15px;
-background-color:#cdc9c9;
 }
 
 #bottompanel {
@@ -84,20 +81,34 @@ float:left;
 margin-top: 10px;
 height:200px;
 width: 862px;
-border-style:solid;
-border-width:medium;
-border-color:gray;
-padding-right:15px;
-padding-left:15px;
-background-color:#cdc9c9;
 font-weight:bold;
 }
 
+.panel {
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+background: #e9eaee;
+border: 2px solid #ffffff;
+
+width: 460px;
+box-shadow: 1px 2px 6px rgba(0,0,0, 0.5);
+-moz-box-shadow: 1px 2px 6px rgba(0,0,0, 0.5);
+-webkit-box-shadow: 1px 2px 6px rgba(0,0,0, 0.5);
+                  
+padding: 10px;
+
+-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+.toppanel {
+width: 275px;
+
+}
+
 .mybutton {
-	margin-left:20px;
-	margin-bottom :20px;
-	margin-top:20px;
-	width :100px;
 	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
 	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
 	box-shadow:inset 0px 1px 0px 0px #ffffff;
@@ -105,18 +116,19 @@ font-weight:bold;
 	background:-moz-linear-gradient( center top, #ededed 5%, #dfdfdf 100% );
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
 	background-color:#ededed;
-	-moz-border-radius:15px;
-	-webkit-border-radius:15px;
-	border-radius:15px;
-	border:2px solid #dcdcdc;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
 	display:inline-block;
 	color:#777777;
 	font-family:arial;
-	font-size:28px;
+	font-size:15px;
 	font-weight:bold;
-	padding:13px 53px;
+	padding:6px 45px;
 	text-decoration:none;
 	text-shadow:1px 1px 0px #ffffff;
+	margin: 20px 5px;
 }.mybutton:hover {
 	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed) );
 	background:-moz-linear-gradient( center top, #dfdfdf 5%, #ededed 100% );
@@ -127,12 +139,49 @@ font-weight:bold;
 	top:1px;
 }
 
+
 .textmessage p {
-max-height :50px;
+//max-height :50px;
 overflow : hidden;
 text-overflow: ellipsis;
+margin-bottom: 15px;
+margin-top: 8px;
+border-bottom: #d4d4d4 solid 1px;
+padding-bottom: 15px;
 }
 
 .clear {
 clear:both;
+}
+
+#contactsform {
+border-bottom: #d4d4d4 solid 1px;
+margin: 0 0 10px 0;
+padding-bottom: 10px;
+}
+
+#contactsform.submit {
+	text-align: right;
+}
+
+.textfield {
+width: 100%;
+}
+
+.contact {
+border-bottom: #d4d4d4 solid 1px;
+margin: 0 0 10px 0;
+padding-bottom: 10px;
+}
+
+.contact a {
+text-decoration: none;
+float:right;
+font-size: 10px;
+}
+
+#microsoft img {
+position: relative;
+left: 560px;
+bottom: -10px;
 }

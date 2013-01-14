@@ -1,3 +1,19 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Networked Vehicles v0.1</title>
+<script src="jquery.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="style.css" />
+
+</head>
+<body style="background: #e9eaee;">
+
+<form name="sms" id="contactsform" action="contacts.php" method="post">
+	<div id = "contactsnameform">Name :<input type="text" class="textfield" name="name"></div>
+	<div id="contactsnumberform">Number :<input type="tel" class="textfield" name="number"></div>
+	<input type="submit" class="submit" value="Submit">
+</form>
+
 <?php 
 error_reporting(E_ALL);
 
@@ -19,7 +35,7 @@ if (isset($_GET['delete'])) {
 		// echo 'Checking ' . $contact->firstChild->nodeValue;
 	
 		if ($contact->firstChild->nodeValue == $name) {
-			echo '<h2>Removing ' . $name . '</h2>';
+			//echo '<h4>Removing ' . $name . '</h4>';
 			$contact->parentNode->removeChild($contact);
 		}
 	}
@@ -45,7 +61,7 @@ if (isset($_POST['name'])&&isset($_POST['number'])) {
 	if ($firstnum == "0") {
 		// We need to change the 0 to a 44
 		$number = '44' . substr($number, 1);
-		echo "number changed to " . $number;
+		//echo "number changed to " . $number;
 	}
 	
 	// We need to check if this contact already exists.
@@ -78,15 +94,12 @@ foreach ($s->contact as $contact) {
 	echo $contact->name;
 	echo '</h3>' . "\n" . '<h4>' . "\n";
 	echo $contact->number;
-	echo '</h4>' . "\n" . '</div>' . "\n";
+	echo '</h4>' . "\n";
 	echo '<a id ="delete" href="contacts.php?delete=' . $contact->name . '">delete</a>';
+	echo '<div class="clear"></div></div>' . "\n";
 }
 
 
 ?>
-
-<form name="sms" action="contacts.php" method="post">
-	Name :<input type="text" name="name">
-	Number :<input type="tel" name="number">
-	<input type="submit" value="Submit">
-</form>
+</body>
+</html>
