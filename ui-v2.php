@@ -54,7 +54,7 @@ $("a[trackgps='yes']").click(function(e){
   if (gps == 0) {
   	$("#status").load("editfile.php?sensor=gps&activate=on");
   	$("#gpsbtn").html("GPS off");
-  	$("#maps").html('<iframe src="map.html" seamless width="100%" height="100%" border="0"></iframe>');
+  	$("#maps").html('<iframe src="map.html" seamless width="100%" height="100%" border="0" style="margin: 0px !important; padding: 0px !important; height: 286px; "></iframe>');
   	gps = 1;
   } else {
   	$("#status").load("editfile.php?sensor=gps&activate=off");
@@ -80,7 +80,7 @@ $("a[trackcamera='yes']").click(function(e){
 });
 
 $("a[trackcontacts='yes']").click(function(e){
-	$("#rightpanel").html('<iframe src="contacts.php" seamless width="100%" height="100%" border="0"></iframe>');
+	$("#rightpanel").html('<iframe src="contacts.php" seamless width="100%" height="100%" border="0" style="margin: 0px !important; padding: 0px !important; height: 286px; "></iframe>');
 });
 
 $("a[tracksms='yes']").click(function(e){
