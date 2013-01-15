@@ -86,6 +86,7 @@ $("a[trackcontacts='yes']").click(function(e){
 
 $("a[tracksms='yes']").click(function(e){
 	$("#rightpanel").load("loadsms.php");
+	$("#rightpanel").css('overflow','scroll');
 });
 
 // Change vertical alignment...
