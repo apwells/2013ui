@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Networked Vehicles v0.1</title>
+<title>Networked Vehicles v1</title>
 <script src="jquery.js" type="text/javascript"></script>
 <link rel="stylesheet" type="text/css" href="style.css" />
 
@@ -34,9 +34,10 @@
 	</div>
 	<div class="clear"></div>
 	<div id="bottompanel" class="panel">
-		<p>System running...</p>
+		<div id="status"><p>System running...</p></div>
+		<div id ="maps"></div>
 	</div>
-<div id="microsoft"><img src="poweredby.png" alt="microsoft" /></div>
+<div id="microsoft"><img src="poweredby-black.png" alt="microsoft" /></div>
 </div>
 
 
@@ -51,13 +52,15 @@ var camera = 0;
 $("a[trackgps='yes']").click(function(e){
   // alert('button clicked');
   if (gps == 0) {
-  	$("#bottompanel").load("editfile.php?sensor=gps&activate=on");
+  	$("#status").load("editfile.php?sensor=gps&activate=on");
   	$("#gpsbtn").html("GPS off");
+  	$("#maps").html('<iframe src="map.html" seamless width="100%" height="100%"></iframe>');
   	gps = 1;
   } else {
-  	$("#bottompanel").load("editfile.php?sensor=gps&activate=off");
+  	$("#status").load("editfile.php?sensor=gps&activate=off");
   	$("#gpsbtn").html("GPS on");
   	gps = 0;
+  	$("#maps").html('');
   }
   
 });
@@ -65,11 +68,11 @@ $("a[trackgps='yes']").click(function(e){
 $("a[trackcamera='yes']").click(function(e){
   // alert('button clicked');
   if (camera == 0) {
-  	$("#bottompanel").load("editfile.php?sensor=camera&activate=on");
+  	$("#status").load("editfile.php?sensor=camera&activate=on");
   	$("#camerabtn").html("Camera off");
   	camera = 1;
   } else {
-  	$("#bottompanel").load("editfile.php?sensor=camera&activate=off");
+  	$("#status").load("editfile.php?sensor=camera&activate=off");
   	$("#camerabtn").html("Camera on");
   	camera = 0;
   }
