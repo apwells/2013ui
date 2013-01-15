@@ -81,6 +81,7 @@ $("a[trackcamera='yes']").click(function(e){
 
 $("a[trackcontacts='yes']").click(function(e){
 	$("#rightpanel").html('<iframe src="contacts.php" seamless width="100%" height="100%" border="0" style="margin: 0px !important; padding: 0px !important; height: 286px; "></iframe>');
+	$("#rightpanel").css('overflow','hidden');
 });
 
 $("a[tracksms='yes']").click(function(e){
