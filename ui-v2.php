@@ -27,7 +27,7 @@
 		<a href="#" trackgps="yes" id="gpsbtn" class="mybutton">GPS on</a>
 		<a href="#" trackcamera="yes" id="camerabtn" class="mybutton">Camera on</a>
 		<a href="#" trackcontacts="yes" class="mybutton">Contacts</a>
-		<a href="#" tracksms="yes" class="mybutton">SMS</a>
+		<a href="#" tracksms="yes" class="mybutton">Messages</a>
 	</div>
 	<div id="rightpanel" class="panel toppanel">
 		<?php include('loadsms.php');?>
@@ -92,7 +92,7 @@ window.onresize = checkAvailableHeight;
 
 function checkAvailableHeight(){
     var yourDiv = document.getElementById("wrapper");
-    yourDiv.style.marginTop = (($(window).height() - 570) / 2) + "px";
+    yourDiv.style.marginTop = (($(window).height() - 670) / 2) + "px";
 }
 
 </script>
