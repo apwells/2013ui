@@ -2,4 +2,6 @@
 <rss version="0.91">
 <sms><number>4431111241</number><message>Hello this is gareth. If you have my number in your contacts my name will display in the above area. This is a long text to check how clipping works in the stylesheet.</message><time>12:30</time></sms>
 <sms><number>4422222221</number><message>This is james. Please add me to your contacts.</message><time>22:22</time></sms>
+<sms><number>4431111241</number><message>Hello this is gareth. If you have my number in your contacts my name will display in the above area. This is a long text to check how clipping works in the stylesheet.</message><time>12:30</time></sms>
+<sms><number>4431111241</number><message>Hello this is gareth. If you have my number in your contacts my name will display in the above area. This is a long text to check how clipping works in the stylesheet.</message><time>12:30</time></sms>
 </rss>

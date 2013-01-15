@@ -74,6 +74,7 @@ text-align: center;
 float:left;
 margin-left: 20px;
 height:350px;
+overflow: scroll;
 }
 
 #bottompanel {
