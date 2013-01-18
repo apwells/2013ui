@@ -12,12 +12,12 @@
 	<div id="leftpanel" class="panel toppanel">
 		<h3>Send SMS</h3>
 		<form name="sms" action="editfile.php" method="post">
-			Phone Number : <input type="tel" pattern="[0-9]{10}" class="textfield" name="number">
+			Phone Number : <input type="tel" class="textfield" name="number">
 			<textarea type="text" name="message" id ="msg"></textarea>
 			<input type="submit" value="Submit">
 		</form>
 		<h3>HTTP request</h3>
-		<form name="website" action="getwebsite.php" method="get">
+		<form name="website" action="#" method="get">
 			Website : <input type="url" class="textfield" name="websiteurl">
 			<input type="submit" value="Submit">
 		</form>
@@ -54,7 +54,7 @@ $("a[trackgps='yes']").click(function(e){
   if (gps == 0) {
   	$("#status").load("editfile.php?sensor=gps&activate=on");
   	$("#gpsbtn").html("GPS off");
-  	$("#maps").html('<iframe src="map.html" seamless width="100%" height="100%" style="border: none; margin: 0px !important; padding: 0px !important; height: 286px; "></iframe>');
+  	$("#maps").html('<iframe src="map.html" seamless width="100%" height="100%" style="border: none; margin: 0px !important; padding: 0px !important; height: 150px; "></iframe>');
   	gps = 1;
   } else {
   	$("#status").load("editfile.php?sensor=gps&activate=off");

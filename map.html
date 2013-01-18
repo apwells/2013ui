@@ -67,8 +67,12 @@ $.ajax({
 	
 	// alert($(this).find("latitude").text());
 	
-	lat = $(this).find("latitude").text();
-	long = $(this).find("longitude").text();
+	// USE THESE LINES AND DELETE THE ONES BELOW FOR FINAL VERSION.
+	//lat = $(this).find("latitude").text();
+	//long = $(this).find("longitude").text();
+	
+	
+
 
  });
 
@@ -76,6 +80,10 @@ $.ajax({
     
 		// END XML
 		
+		// EMULATING TRAVEL
+		lat = lat+0.0001;
+		long = long+0.0001;
+	
 		map.panTo(new google.maps.LatLng(lat, long));
 	}, 200);
   
