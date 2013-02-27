@@ -12,13 +12,13 @@
 	<div id="leftpanel" class="panel toppanel">
 		<h3>Send SMS</h3>
 		<form name="sms" action="editfile.php" method="post">
-			Phone Number : <input type="tel" class="textfield" name="number">
+			<span>Phone Number : </span><input type="tel" class="textfield" name="number">
 			<textarea type="text" name="message" id ="msg"></textarea>
 			<input type="submit" value="Submit">
 		</form>
 		<h3>HTTP request</h3>
 		<form name="website" action="#" method="get">
-			Website : <input type="url" class="textfield" name="websiteurl">
+			<span>Website : </span><input type="url" class="textfield" name="websiteurl">
 			<input type="submit" value="Submit">
 		</form>
 		
@@ -37,6 +37,8 @@
 		<div id="status"><p>System running...</p></div>
 		<div id ="maps"></div>
 	</div>
+	<div class="clear"></div>
+	<div id="appearance"><a href="#" tracklink="yes">Appearance</a></div>
 <div id="microsoft"><img src="poweredby-black.png" alt="microsoft" /></div>
 </div>
 
@@ -48,6 +50,7 @@
 
 var gps = 0;
 var camera = 0;
+var style = 0;
 
 $("a[trackgps='yes']").click(function(e){
   // alert('button clicked');
@@ -88,6 +91,18 @@ $("a[tracksms='yes']").click(function(e){
 	$("#rightpanel").load("loadsms.php");
 	$("#rightpanel").css('overflow','scroll');
 });
+
+$("a[tracklink='yes']").click(function(e){
+	if (style == 0){
+	$('link[href="style.css"]').attr('href','style2.css');
+	style = 1;
+	} else {
+	$('link[href="style2.css"]').attr('href','style.css');
+	style = 0;
+	}
+});
+
+
 
 // Change vertical alignment...
 

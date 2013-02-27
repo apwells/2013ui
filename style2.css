@@ -1,3 +1,7 @@
+/*
+** High contrast style for projection.
+*/
+
 #wrapper {
 width: 898px;
 margin: auto;
@@ -14,13 +18,17 @@ p, h1, h2, h3, h4{
 margin: 0;
 }
 
+span {
+color : white;
+}
+
 h3 {
-color: #416470;
+color: white;
 margin-bottom: 5px;
 }
 
 p {
-color: #323232;
+color: white;
 font-weight: lighter;
 font-size: 12px;
 }
@@ -30,6 +38,7 @@ font-family: 'Courier', Arial;
 text-autospace: 5px;
 font-size: 12px;
 font-weight: lighter;
+color: white;
 }
 
 #phonenumber{
@@ -89,7 +98,7 @@ font-weight:bold;
 -webkit-border-radius: 10px;
 -moz-border-radius: 10px;
 border-radius: 10px;
-background: #e9eaee;
+background: black;
 border: 2px solid #ffffff;
 
 width: 460px;
@@ -187,6 +196,7 @@ text-decoration: none;
 float:right;
 font-size: 10px;
 }
+
 
 #appearance {
 font-size: small;
